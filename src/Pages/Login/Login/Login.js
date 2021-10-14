@@ -7,7 +7,7 @@ const Login = () => {
     const location = useLocation();
     const redirect_url = location.state?.from || '/home';
     const history = useHistory();
-    const manageRidirectory = () => {
+    const manageRedirect = () => {
         signInUsingGoogle()
             .then(() => {
                 history.push(redirect_url);
@@ -16,7 +16,7 @@ const Login = () => {
     return (
         <div>
             <h2>Please Login</h2>
-            <button onClick={manageRidirectory} className="btn btn-warning">Google Sign In</button>
+            <button onClick={manageRedirect} className="btn btn-warning">Google Sign In</button>
         </div>
     );
 };
